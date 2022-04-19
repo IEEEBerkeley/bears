@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "BEARS Symposium",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "preact build",
+    "dev": "preact watch",
+    "lint": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "preact",
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-preact": "^1.1.0",
+    "jest-preset-preact": "^1.0.0",
+    "preact-cli": "^3.0.0",
+    "sass": "^1.50.1",
+    "sass-loader": "^10.2.1"
+  },
+  "dependencies": {
+    "preact": "^10.3.2",
+    "preact-lazyimage": "^0.0.5",
+    "preact-render-to-string": "^5.1.4",
+    "preact-router": "^3.2.1"
+  }
+}

@@ -1,0 +1,100 @@
+@function with-unit($value, $unit) {
+	@return #{$value}#{$unit};
+}
+
+@mixin fluid($key, $min-vw, $max-vw, $min-font-size, $max-font-size, $unit) {
+	$wu1: with-unit($min-vw, $unit);
+	$wu2: with-unit($max-vw, $unit);
+	$wu3: with-unit($min-font-size, $unit);
+	$wu4: with-unit($max-font-size, $unit);
+
+	& {
+		#{$key}: $wu3;
+		@media screen and (min-width: $wu1) {
+			#{$key}: calc(#{$wu3} + #{$max-font-size - $min-font-size} * ((100vw - #{$wu1}) / #{$max-vw - $min-vw}))
+		}
+		@media screen and (min-width: $wu2) {
+			#{$key}: $wu4;
+		}
+	}	
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $unit) {
+	@include fluid(font-size, $min-vw, $max-vw, $min-font-size, $max-font-size, $unit);
+}
+
+.home {
+	padding: 20px 20px;
+	min-height: 100%;
+	width: 100%;
+	background-color: #152484;
+	background-image: url(/assets/images/bears-background.png);
+	background-size: cover;
+
+	p {
+		text-align: center;
+		@include fluid-type(300, 1400, 18, 25, px);
+		padding: 0 2vw;
+		margin: 2em 0;
+	}
+	position: relative;
+}
+
+.header {
+	display: inline-flex;
+	align-items: center;
+	margin: auto;
+
+	@media only screen and (max-width: 475px) {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	h1 {
+		@include fluid-type(300, 1400, 20, 35, px);
+		margin-bottom: 0.2em;
+	}
+	h2 {
+		@include fluid-type(300, 1400, 18, 30, px);
+		margin-top: 0.2em;
+	}
+}
+
+.logo {
+	height: 6.5em;
+	width: 6.5em;
+}
+
+.bears_img {
+	position: fixed;
+	width: 35vmax;
+	height: 35vmax;
+	object-fit: contain;
+	pointer-events: none;
+}
+
+.bears_planets {
+	bottom: 0;
+	left: 0;
+	transform: translate(-15%, 5%);
+}
+
+.bears_satellite {
+	top: 0;
+	right: 0;
+	transform: translate(25%, 0);
+}
+
+.bears_stars {
+	bottom: 0;
+	right: 0;
+}
+
+.over {
+	position: relative;
+	z-index: 1;
+}
+
+.under {
+	z-index: 0;
+}
