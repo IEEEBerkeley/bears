@@ -67,8 +67,8 @@
 
 .bears_img {
 	position: fixed;
-	width: 35vmax;
-	height: 35vmax;
+	width: 35vmin;
+	height: 35vmin;
 	object-fit: contain;
 	pointer-events: none;
 }
@@ -97,4 +97,46 @@
 
 .under {
 	z-index: 0;
+}
+
+.reg_form {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+.logos_box {
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	img {
+		height: 15vw;
+		width: auto;
+	}
+	margin: 10vw auto;
+	@media only screen and (max-width: 475px) {
+
+		img {
+			width: 40%;
+			height: auto;
+		}
+
+		img:nth-child(2) {
+			width: 75%;
+			height: auto;
+			order: 2;
+		}
+	}
+}
+
+.citadel {
+	width: 100%;
+	max-width: 75vw;
+	margin: auto;
+	display: block;
+
+	@media only screen and (max-width: 475px) {
+		max-width: unset;
+	}
 }

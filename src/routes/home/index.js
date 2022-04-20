@@ -11,9 +11,26 @@ const Home = () => (
 					<h2>Tuesday, April 26th 6-8 PM | East Pauley Ballroom</h2>
 				</div>
 			</div>
-			<p>Join SAAS, Machine Learning @ Berkeley, and Berkeley IEEE for a research and project showcase highlighting original, cutting edge, and diverse research projects from all fields of electrical engineering, computer science, and data science!</p>
-			<p>Sponsored by Citadel</p>
+			<p>Join SAAS, Machine Learning @ Berkeley, and Berkeley IEEE for a research and project showcase highlighting original, cutting edge, and diverse independent research projects from all fields of electrical engineering, computer science, and data science!</p>
+			<div class={style.logos_box}>
+				<a href="https://ieee.berkeley.edu" target="_blank" rel="noreferrer">
+					<img src="/assets/logos/ieee.png" />
+				</a>
+				<a href="https://saas.berkeley.edu" target="_blank" rel="noreferrer">
+					<img src="/assets/logos/saas.png" />
+				</a>
+				<a href="https://ml.berkeley.edu" target="_blank" rel="noreferrer">
+					<img src="/assets/logos/ml.png" />
+				</a>
+			</div>
+			<p>Sponsored by</p>
+			<a href="https://www.citadel.com" target="_blank" rel="noreferrer">
+				<img src="/assets/logos/citadel.png" class={style.citadel} />
+			</a>
 			<p><b>Register Below</b></p>
+
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv0Qy1MfjOk6XoFsklywT0xb9WEJK97KFwgbq6qHsZdzG-rw/viewform?embedded=true" width="300" height="2300" frameborder="0" marginheight="0" marginwidth="0" class={style.reg_form}>Loading…</iframe>
+
 		</div>
 
 		<div class={style.under}>
