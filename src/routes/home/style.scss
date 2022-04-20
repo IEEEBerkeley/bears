@@ -109,27 +109,29 @@
 	display: flex;
 	max-width: 100%;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: center;
+	align-items: center;
 	a {
-		height: 15vw;
+		height: 7.5vw;
 		width: auto;
+		margin: 0 10px;
 	}
 	img {
 		height: 100%;
 		width: auto;
 	}
-	margin: 10vw auto;
+	margin: 2vw auto;
 	@media only screen and (max-width: 475px) {
 
 		a {
-			width: 40%;
+			width: 15%;
 			height: auto;
 		}
 
 		a:nth-child(2) {
-			width: 75%;
+			width: 30%;
 			height: auto;
-			order: 2;
+			// order: 2;
 		}
 
 		img {
@@ -140,7 +142,7 @@
 }
 
 .citadel {
-	width: 100%;
+	width: 50%;
 	max-width: 75vw;
 	margin: auto;
 	display: block;
