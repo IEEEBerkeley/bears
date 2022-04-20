@@ -110,22 +110,31 @@
 	max-width: 100%;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	img {
+	a {
 		height: 15vw;
+		width: auto;
+	}
+	img {
+		height: 100%;
 		width: auto;
 	}
 	margin: 10vw auto;
 	@media only screen and (max-width: 475px) {
 
-		img {
+		a {
 			width: 40%;
 			height: auto;
 		}
 
-		img:nth-child(2) {
+		a:nth-child(2) {
 			width: 75%;
 			height: auto;
 			order: 2;
+		}
+
+		img {
+			height: auto;
+			width: 100%;
 		}
 	}
 }

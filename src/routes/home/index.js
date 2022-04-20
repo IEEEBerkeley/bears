@@ -29,7 +29,7 @@ const Home = () => (
 			</a>
 			<p><b>Register Below</b></p>
 
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv0Qy1MfjOk6XoFsklywT0xb9WEJK97KFwgbq6qHsZdzG-rw/viewform?embedded=true" width="300" height="2300" frameborder="0" marginheight="0" marginwidth="0" class={style.reg_form}>Loading…</iframe>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv0Qy1MfjOk6XoFsklywT0xb9WEJK97KFwgbq6qHsZdzG-rw/viewform?embedded=true" width="300" height="2000" frameborder="0" marginheight="0" marginwidth="0" class={style.reg_form}>Loading…</iframe>
 
 		</div>
 
